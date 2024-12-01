@@ -18,9 +18,9 @@ pub fn part_one(input: &str) -> Option<u32> {
     v2.sort();
     Some(v1
         .iter()
-        .zip(v2.iter())
-        .map(|(a, b)| a.abs_diff(*b))
-        .sum::<u32>())
+        .zip(v2)
+        .map(|(a, b)| a.abs_diff(b))
+        .sum())
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
