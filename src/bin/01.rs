@@ -38,7 +38,7 @@ pub fn part_two(input: &str) -> Option<u32> {
                 None => 0,
             }
         })
-        .sum::<u32>())
+        .sum())
 }
 
 #[cfg(test)]
