@@ -1,4 +1,3 @@
-use std::{collections, hash::Hash};
 
 advent_of_code::solution!(4);
 
@@ -17,7 +16,7 @@ pub fn part_one(input: &str) -> Option<u32> {
                     for k in 1..target.len() {
                         let (ny, nx) = (i as i32 + *dy as i32 * k as i32, j as i32 + *dx as i32 * k as i32); // no overflows, and then check to safely cast.
                         if ny >= 0 && ny < matrix.len() as i32 && nx >= 0 && nx < matrix[0].len() as i32 {
-                            let (ny, nx) = (ny as usize, nx as usize); 
+                            let (ny, nx) = (ny as usize, nx as usize);
                             if matrix[ny][nx] != target[k] {
                                 break;
                             }
